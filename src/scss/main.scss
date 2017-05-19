@@ -1,0 +1,489 @@
+@import '../../node_modules/normalize.css/normalize';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Squada+One');
+
+$purple:    #4D3076;
+
+$color-back:  $purple;
+$color-text:  #FFF;
+
+$font-titles:   'Squada One', cursive;
+$font-text:   'Montserrat', sans-serif;
+
+$tablet:  600px;
+$desktop:   1024px;
+
+@mixin tablet{
+	@media only screen and (min-width: #{$tablet} )
+	{
+		@content;
+	}
+}
+
+@mixin desktop{
+	@media only screen and (min-width: #{$desktop} )
+	{
+		@content;
+	}
+}
+
+@mixin margins
+{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+body
+{
+	background-color: $color-back;
+	color: $color-text;
+	font-family: $font-text;
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+.content
+{
+	margin: auto;
+	max-width: 1200px;
+	position: relative;
+}
+h1
+{
+	font-size: 30px;
+	@include tablet
+	{
+		font-size: 50px;
+	}
+}
+
+/*menu*/
+
+	.header
+	{     
+
+		background-color: #212121;
+		padding-bottom: 70px;
+		.top
+		{
+			text-align: center;
+
+			@include tablet
+			{
+				text-align: initial;
+
+			}
+		}
+
+		@include tablet
+		{
+			background: none;
+			margin: auto;
+			position: relative;
+			padding: 20px;
+			padding-bottom: 70px;
+		}
+	}
+	.logo
+	{
+		margin: 0;
+		padding: 20px 0;
+		img{
+			width: 160px;
+			margin: 0;
+		}
+
+		@include tablet
+		{
+			display: inline-block;
+			margin-left: 0;
+		}
+	}
+
+	.menu
+	{
+		font-size: 1em;
+		ul
+		{
+			margin: 10px 0;
+			padding: 0 100px;
+
+			li
+			{
+				border-bottom: 2px solid white;
+				cursor: pointer;
+				display: block;
+				list-style: none;
+				margin: 0;
+				padding: 5px 0;
+
+				&:first-child
+				{
+					border-top: 2px solid white;
+					@include tablet
+					{
+						border-top: none;
+					}
+				}
+
+				@include tablet
+				{
+					display: inline-block;
+				}
+
+				a
+				{
+					cursor: pointer;
+					color: $color-text;
+					text-decoration: none;
+					font-weight: 400;
+					font-size: 0.9em;
+				}
+				@include tablet
+				{
+					border-bottom: none;
+					padding: 8px 8px;
+				}
+			}
+			@include tablet
+			{
+				padding: 0 20px;
+			}
+			
+		}
+		@include tablet
+		{
+			display: inline-block;
+			font-size: 24px;
+			position: absolute;
+			right: 0;
+		}
+	}
+
+	.iconapp
+	{
+		img
+		{
+			width: 150px;
+		}
+	}
+
+	/*coverinfo*/
+		.coverinfo
+		{
+			padding: 0 30px;
+			text-align: center;
+			h1
+			{
+				font-size: 1.2em;
+				font-weight: 400;
+
+				@include tablet
+				{
+					font-size: 2.5em;
+				}
+
+			}
+
+			h3
+			{
+				font-size: 0.7em;
+				font-weight: 400;
+				margin-bottom: 40px;
+			}
+			a
+			{ 
+				background: white;
+				border-radius: 10px;
+				color: #474747;
+				font-size: 0.8em;
+				padding: 20px;
+				text-decoration: none;
+				img
+				{
+					vertical-align: middle;
+				}
+
+				@include tablet
+				{
+					font-size: 1.1em;
+					padding: 20px 50px;
+				}
+			}
+		}
+	/*end coverinfo*/
+/*end menu*/
+
+/*toxic*/
+	.toxic, .data
+	{
+		@include margins;
+		padding: 0 20px;
+		text-align: center;
+		h2
+		{
+			font-size: 1.2em;
+			font-weight: 300;
+			@include tablet
+			{
+				font-size: 2.3em;
+			}
+		}
+
+		h3
+		{
+			font-size: 0.7em;
+			font-weight: 300;
+		}
+		@include tablet
+		{
+			padding: 0 50px;
+		}
+	}
+
+
+	.toxic-chat
+	{
+		padding: 0;
+		li
+		{
+			position: relative;
+			list-style: none;
+			margin-top: 40px;
+			.chat-right
+			{
+				background: white;
+				border-radius: 5px;
+				color: #2b3c80;
+				font-size: 0.5em;
+				font-weight: 300;
+				margin-left: 10px;
+				padding: 10px 5px;
+				position: absolute;
+				top: -7px;
+				width: 100px;
+				&:before
+				{
+					border-color: transparent white white transparent;
+					border-style: solid;
+					border-width: 15px;
+					content: " ";
+					height: 0;
+					left: -15px;
+					position: absolute;
+					top: 8px;
+					width: 0;
+				}
+			}   
+			.chat-left
+			{
+				background: white;
+				border-radius: 5px;
+				color: #2b3c80;
+				font-size: 0.5em;
+				font-weight: 300;
+				margin-left: -177px;
+				padding: 10px 5px;
+				top: -7px;
+				position: absolute;
+				width: 100px;
+
+				&:before
+				{
+					border-color: transparent transparent white transparent;
+					border-style: solid;
+					border-width: 15px;
+					content: " ";
+					height: 0;
+					position: absolute;
+					left: 94px;
+					top: 8px;
+					width: 0;
+				}
+			}
+			img
+			{
+				position: relative;
+				width: 50px;
+			}
+
+			.chat-separate
+			{
+				&:before
+					{
+						content: "";
+						background: #5b4686;
+						bottom: -41px;
+						height: 52px;
+						left: 50%;
+						margin-left: -6px;
+						position: absolute;
+						width: 12px;
+						z-index: -1;
+					}     
+			}
+		}
+
+	}
+/*end toxic*/
+
+/*data*/
+	.data
+	{
+		@include margins;
+		h2
+		{
+			font-size: 3em;
+			font-weight: 300;
+			margin-top: 0;
+			margin-bottom: 0;
+			@include tablet
+			{
+				font-size: 4em;
+			}
+		}
+
+		h3
+		{
+			font-size: 0.6em;
+			font-weight: 300;
+
+		}
+	}
+/*end data*/
+
+/*champs*/
+	.champ
+	{
+		@include margins;
+		background-color: #212121;
+		padding: 30px 0;
+		text-align: center;
+		div
+		{
+			display: inline-block;
+			margin: 20px 0;
+			text-align: center;
+			width: 150px;
+		}
+		h2
+		{
+			font-size: 1.5em;
+			font-weight: 300;
+			margin-bottom: 50px;
+
+			@include tablet
+			{
+				font-size: 2.3em;
+			}
+		}
+		@include tablet
+		{
+			padding: 30px 80px;
+		}
+	}
+
+	.champs
+	{
+		text-align: center;
+		a 
+		{ 
+			text-decoration: none;
+			span{
+				color: white;
+				display: block;
+				font-weight: 700;
+				font-size: 0.6em;
+			}
+			img
+			{
+				width: 90px;
+			}
+		}
+	}
+/*end champs*/
+
+/*challenger*/
+	.challenger
+	{
+		@include margins;
+		text-align: center;
+		padding: 0 20px;
+
+		img
+		{
+			padding-top: 30px;
+			width: 150px;
+		}
+		h2
+		{
+			font-size: 1.5em;
+			font-weight: 300;
+			@include tablet
+			{
+				font-size: 2.3em;
+			}
+		}
+		h3
+		{
+			font-size: 0.7em;
+			font-weight: 300;
+		}
+		@include tablet
+		{
+			padding: 0 50px;
+		}
+	}
+/*end challenger*/
+
+
+/*footer*/
+	.footer
+	{
+		background-color: #212121;
+		text-align: center;
+		img
+		{
+			width: 90px;
+			margin-bottom: 10px;
+		}
+		span
+		{
+			display: block;
+			font-weight: 300;
+			font-size: 0.6em;
+			padding-bottom: 20px;
+		}
+	}
+
+	.footer-menu
+	{
+		padding-top: 20px;
+		ul
+		{
+			text-align: center;
+			padding: 0;
+			li
+			{
+				padding: 10px 0;
+				list-style: none;
+				a
+				{
+					color: white;
+					text-decoration: none;
+					font-weight: 400;
+				}
+				@include tablet
+				{
+					display: inline-block;
+					padding: 0 10px;
+					font-size: 0.7em;
+				}
+			}
+		}
+		@include tablet
+		{
+			padding-top: 5px;
+		}
+	}
+/*end footer*/

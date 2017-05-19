@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Surrender at 15</title>
+	<link rel="shortcut icon" type="image/png" href="images/iconapp.png"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header class="header content"> <!-- header -->
+		<div class="top">
+			<figure class="logo"> <!-- logo -->
+				<img src="images/logo.png">
+			</figure> 
+			<nav class="menu"> <!-- menu -->
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Surrender</a>
+					</li>
+					<li>
+						<a href="#">Report</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="coverinfo content"> <!-- coverinfo -->
+			<figure class="iconapp">
+				<img src="images/iconapp.png">
+			</figure>
+			<h1>¿Quieres dejar de ser un noob?</h1>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</h3>
+			<a href="http://lan.leagueoflegends.com/">
+				<img src="images/headset.png">
+				<span>Jugar</span>
+			</a>
+		</div>
+	</header>
+	<section class="toxic content"> <!-- toxic -->
+		<h2>¿Te ocurre esto en cada partida?</h2>
+		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h3>
+		<div>
+			<ul class="toxic-chat">
+				<li>
+					<img src="images/annie.png">
+					<span class="chat-separate"></span>
+					<span class="chat-right"><strong>Annie</strong>: Deja de morir por favor</span>
+				</li>				
+				<li>
+					<img src="images/catlyn.png">
+					<span class="chat-separate"></span>
+					<span class="chat-left"><strong>Catlyn</strong>: Mi support es noob</span>
+				</li>				
+				<li>
+					<img src="images/karma.png">
+					<span class="chat-separate"></span>
+					<span class="chat-right"><strong>Karma</strong>: Mejor farmea</span>
+				</li>				
+				<li>
+					<img src="images/olaf.png">
+					<span class="chat-left"><strong>Olaf</strong>: Surrender report jungla</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+ 
+	<section class="data content"> <!-- data -->
+		<h3>Promos para Plata V perdidas</h3>
+		<h2>6,305,945</h2>
+		<h3>Promos para Plata V perdidas</h3>
+	</section>	
+
+	<section class="champ content" ng-app="gg" ng-controller="champsCtrl"> <!-- champs -->
+		<h2>Busca un campeón</h2>
+		<!-- <div ng-repeat="(key, value) in champs.data"> -->
+		<div ng-repeat="(key, value) in champs.data">
+			<article class="champs">
+				<a href="">
+					<img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/{{ value.image.full }}" />
+					<span>{{ value.name }}</span>				
+				</a>			
+			</article>
+		</div>
+	</section>
+	
+	<section class="challenger content"> <!-- challenger -->
+		<h2>Sé un challenger</h2>
+		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h3>
+		<img src="images/challenger.png" />
+	</section>
+
+	<footer class="footer"> <!-- footer -->
+		<nav class="footer-menu">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Surrender</a>
+				</li>
+				<li>
+					<a href="#">Report</a>
+				</li>
+			</ul>
+		</nav>
+		<img src="images/iconapp.png" />
+		<span>© 2017 carcmonge. All Rights Reserved.</span>
+	</footer>
+	<script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>

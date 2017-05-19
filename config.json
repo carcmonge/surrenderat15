@@ -1,0 +1,9 @@
+{
+  "css": [
+    "src/scss/main.scss"
+  ],
+  "js": [
+    "node_modules/jquery/dist/jquery.min.js",
+    "src/js/main.js"
+  ]
+}
